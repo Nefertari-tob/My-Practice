@@ -23,13 +23,13 @@
       </a-sub-menu>
       </a-menu>
     </a-layout-sider>
-    <!-- <a-layout>
+    <a-layout>
       <a-layout-header style="background: #fff; padding: 0">
-        <a-icon
+        <!-- <a-icon
           class="trigger"
           :type="collapsed ? 'menu-unfold' : 'menu-fold'"
           @click="() => (collapsed = !collapsed)"
-        />
+        /> -->
       </a-layout-header>
       <a-layout-content
         :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
@@ -41,7 +41,7 @@
           v-show="active == 1"
         ></About>
       </a-layout-content>
-    </a-layout> -->
+    </a-layout>
   </a-layout>
 </template>
 <script>
@@ -75,9 +75,10 @@ export default {
 </script>
 <style lang="less">
 .layouter{
-  height: 100vh;
-  width: 250px;
-  background: #1890ff;
+  // height: 100vh;
+  height: 100%;
+  // width: 250px;
+  // background: #1890ff;
   .trigger {
     font-size: 18px;
     line-height: 64px;

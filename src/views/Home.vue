@@ -1,41 +1,36 @@
 <template>
   <div class="home">
-    <Layout/>
     <div>
       <img alt="Vue logo" src="../assets/logo.png">
       <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <a-input placeholder="Basic usage" />
+      <!-- <a-input placeholder="Basic usage" /> -->
     </div>
-    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import Layout from './layout.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
-    Layout
+    HelloWorld
   },
   data(){
     return{
-
-    }
+      collapsed: false
+    };
   },
-  mounted(){
-    console.log(123456);
+  methods:{
+    toggleCollapsed(){
+      this.collapsed=!this.collapsed
+    }
   }
 }
 </script>
 <style lang="less">
-// .home{
-//   margin: 0 outo;
-//   background: aqua;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
+.home{
+  background: #fff;
+  // height: inherit;
+  height: 100%;
+}
 </style>
